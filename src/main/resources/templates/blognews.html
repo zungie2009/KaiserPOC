@@ -1,0 +1,54 @@
+<html layout:decorator="layout">
+
+<div layout:fragment="content">
+	<style type="text/css">
+div#myDiv>a {
+	text-decoration: none;
+	transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+
+div#myDiv>a:hover {
+	background: wheat;
+	color: #eee;
+}
+</style>
+
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<h3 class="panel-title">Proof of Concept Demo Dashboard</h3>
+		</div>
+		<div class="panel-body">
+			<button type="button" class="btn btn-default" onclick="document.location.href='/'">Dashboard</button>
+			<button type="button" class="btn btn-default" onclick="document.location.href='/rss/wp'">News from Washington Post (W.P)</button>
+			<button type="button" class="btn btn-default" onclick="document.location.href='/rss/nyt'">News from New York Times (N.Y.T)</button>
+			<button type="button" class="btn btn-default" onclick="document.location.href='/rest/wp'">ReST JSON from W.P</button>
+			<button type="button" class="btn btn-default" onclick="document.location.href='/rest/wp'">ReST JSON from N.Y.T</button>
+		</div>
+	</div>
+	
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<h3 class="panel-title">RSS Listing</h3>
+		</div>
+		<div class="container-fluid">
+			<div class="row" style="background-color: #ddd">
+				<div class="col-md-2">Title</div>
+				<div class="col-md-6">Description</div>
+				<div class="col-md-2">Author</div>
+				<div class="col-md-2">GUID</div>
+			</div>
+			<div th:each="fm : ${news}" class="row">
+				<div class="col-md-2"><a th:href="@{*{fm.link}}" th:text="*{fm.title}" target="_blank"></a></div>
+				<div th:text="*{fm.description}" class="col-md-6"></div>
+				<div th:text="*{fm.author}" class="col-md-2"></div>
+				<div th:text="*{fm.guid}" class="col-md-2"></div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.min.js"></script>
+
+</div>
+
+</html>

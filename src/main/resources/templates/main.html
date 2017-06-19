@@ -1,0 +1,37 @@
+<html layout:decorator="layout">
+
+<div layout:fragment="content">
+<style type="text/css">
+
+div#myDiv > a {
+	text-decoration: none;
+	transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+
+div#myDiv > a:hover {
+	background: wheat;
+	color: #eee;
+}
+	
+</style>
+
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<h3 class="panel-title">Proof of Concept Demo Dashboard</h3>
+		</div>
+		<div class="panel-body">
+			<button type="button" class="btn btn-default" onclick="document.location.href='/'">Dashboard</button>
+			<button type="button" class="btn btn-default" onclick="document.location.href='/rss/wp'">News from Washington Post (W.P)</button>
+			<button type="button" class="btn btn-default" onclick="document.location.href='/rss/nyt'">News from New York Times (N.Y.T)</button>
+			<button type="button" class="btn btn-default" onclick="document.location.href='/rest/wp'">ReST JSON from W.P</button>
+			<button type="button" class="btn btn-default" onclick="document.location.href='/rest/wp'">ReST JSON from N.Y.T</button>
+		</div>
+	</div>
+	
+	<div>
+		Build Date: 06/18/2017 07:30 PM
+	</div>
+
+</div>
+
+</html>

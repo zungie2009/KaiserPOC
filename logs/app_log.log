@@ -1,0 +1,6 @@
+[INFO ] 2017-06-18 18:10:50.541 [main] KaiserPocApplication - Starting KaiserPocApplication on NOTEBOOK-HPI7 with PID 620 (C:\work_projects\KaiserPOC\target\classes started by Robert in C:\work_projects\KaiserPOC)
+[INFO ] 2017-06-18 18:10:50.546 [main] KaiserPocApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-06-18 18:10:58.063 [main] WebSecurityConfig$$EnhancerBySpringCGLIB$$52da64aa - Initialize Web Security
+[INFO ] 2017-06-18 18:11:00.847 [main] KaiserPocApplication$$EnhancerBySpringCGLIB$$4f5061f1 - ************************Initialize First Time Users
+[INFO ] 2017-06-18 18:11:01.097 [main] KaiserPocApplication - Started KaiserPocApplication in 10.95 seconds (JVM running for 12.739)
+[INFO ] 2017-06-18 18:11:29.266 [http-nio-8080-exec-3] CurrentUserDetailsService - ***********************************Found Login User: user1 with Password $2a$10$hh1MWMwe9R2Cs9y/wz4qDueRVRoJmkVu5cgzqyuUB9NwNjEE1/jXq

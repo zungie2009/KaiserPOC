@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<base href="/" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="css/animate.min.css" />
+<link rel="stylesheet" href="css/ebonding.css" />
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ebonding.js"></script>
+
+<title>Proof of Concept using Spring Boot</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<nav class="navbar navbar-custom">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">Spring Boot Proof of Concept Demo</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">Home</a></li>
+						<li th:if="${user}"><a th:href="'/user_edit/' + ${user.id}" th:text="'Welcome ' + ${user.first_name} + ' ' + ${user.last_name}"></a></li>
+						<li><a href="/login">Log In/Sign Up</a></li>
+						<li><a href="/logout">Logout</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+
+		<div>
+			&nbsp;<br />
+		</div>
+
+		<div class="container-fluid" layout:fragment="content"></div>
+	</div>
+</body>
+</html>

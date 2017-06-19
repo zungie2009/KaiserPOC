@@ -1,0 +1,58 @@
+<html layout:decorator="layout">
+
+<div class="container-fluid" layout:fragment="content"
+	style="margin-top: 1px">
+	<form action="/signon" method="post">
+		<input type="hidden" name="id" th:value="${edituser.id}" />
+		<h4 class="wizardInstruction">New User Registration</h4>
+		<table width="800" cellspacing="3" cellpadding="3">
+			<tr>
+				<td width="50%">*First name:</td>
+				<td width="50%"><input type="text"
+					name="firstName" class="input wizarddata"
+					maxlength="50" aria-required="true" th:value="${edituser.first_name}" tabindex="1"
+					id="newFirstName" /></td>
+			</tr>
+
+			<tr>
+				<td>*Last name:</td>
+				<td><input type="text" name="lastName"
+					class="input wizarddata" aria-required="true" maxlength="255"
+					th:value="${edituser.last_name}" tabindex="2" id="lastName" /></td>
+			</tr>
+
+			<tr>
+				<td>*Email:</td>
+				<td><input type="email" pattern="[^ @]*@[^ @]*"
+					name="email" class="input wizarddata"
+					maxlength="255" aria-required="true" th:value="${edituser.email}" tabindex="4"
+					id="useremail" /></td>
+			</tr>
+
+			<tr>
+				<td>*User Name:</td>
+				<td><input type="text" name="userName"
+					class="input wizarddata" aria-required="true" maxlength="255"
+					th:value="${edituser.username}" tabindex="5" id="userName" /></td>
+			</tr>
+
+			<tr>
+				<td>*Password:</td>
+				<td><input type="password"
+					name="password" class="input wizarddata"
+					maxlength="255" aria-required="true" value="" tabindex="6"
+					id="userpassword" /></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>
+					<span class="btn btn-md btn-danger badge-right" style="margin-top: 5px"
+					onclick="document.forms[0].submit();">Submit</span>
+				</td>
+			</tr>
+
+		</table>
+	</form>
+</div>
+</html>

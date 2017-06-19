@@ -1,0 +1,36 @@
+<html layout:decorator="layout">
+
+<div layout:fragment="content">
+	<form role="form" action="/login" method="post">
+		<div class="container">
+			<div class="row">
+				<div>
+					<div class="row">
+						<div class="col-lg-6">
+							<h2 class="text-danger">Application User Login</h2>
+							
+							Windows (Domain) User ID <br /> <input name="username"
+								placeholder="name" required="true" autofocus="true" tabindex="1" />
+							<br /> Password <br /> <input type="password" name="password"
+								id="password" required="true" tabindex="2" /> <br /> <br />
+							<button type="submit" class="btn btn-danger btn-lg">Sign-In</button>
+						</div>
+						<div class="col-lg-6">
+							<h2>
+								<strong>Application users</strong>
+							</h2>
+							<ul class="list-unstyled">
+								<li><a href="/signup">Sign-On</a></li>
+								<li>Forgot/Reset your password</li>
+								<li>Unlock Account</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</form>
+
+</div>
+</html>
